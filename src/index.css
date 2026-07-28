@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* VANDEX — petrol-green base with a teal accent + brass highlight system */
+  --color-navy: #0A1413;        /* petrol black-green base (legacy token name) */
+  --color-navy-2: #10201E;      /* elevated surface */
+  --color-navy-3: #17302C;      /* highest surface */
+  --color-blue: #0D9488;        /* deep teal (legacy token name) */
+  --color-sky: #2DD4BF;         /* vandex teal — primary accent */
+  --color-teal: #C9A227;        /* brass — secondary highlight (legacy token name) */
+  --color-orange: #E8843C;      /* amber-orange — button sweep / urgent AOG accents */
+  --color-ink: #0A1413;
+  --color-light: #EAF3F1;       /* off-white — wordmark / text */
+  --color-silver: #AFC3BE;
+  --color-muted: #7E938D;       /* cool sage gray */
+  --color-line: #21322F;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* Implementation-detail tokens (not Tailwind palette entries — kept outside @theme
+   so they don't generate extra utility classes). Dark is the brand default. */
+:root {
+  --glass-1: rgba(16,32,30,.75);
+  --glass-2: rgba(10,20,19,.55);
+  --glass-border: rgba(201,206,214,.10);
+  --glass-solid: rgba(10,20,19,.92);
+  --grad-text-1: #F5F6F7;
+  --grad-text-2: #C9CED6;
+  --grad-text-3: #6E767F;
+  --grad-accent-mid: #C9A227;
+  --grad-accent-end: #2DD4BF;
+  --scrollbar-track: #0A1413;
+  --scrollbar-thumb: #21322F;
+  --cursor-ring-border: rgba(201,206,214,.4);
+}
+
+/* Sections that intentionally stay dark regardless of site theme (hero video, blueprint story) */
+.dark-scope {
+  --color-navy: #0A1413;
+  --color-navy-2: #10201E;
+  --color-navy-3: #17302C;
+  --color-sky: #2DD4BF;
+  --color-teal: #C9A227;
+  --color-orange: #E8843C;
+  --color-ink: #0A1413;
+  --color-light: #EAF3F1;
+  --color-silver: #AFC3BE;
+  --color-muted: #7E938D;
+  --color-line: #21322F;
+
+  --glass-1: rgba(16,32,30,.75);
+  --glass-2: rgba(10,20,19,.55);
+  --glass-border: rgba(201,206,214,.10);
+  --glass-solid: rgba(10,20,19,.92);
+  --grad-text-1: #F5F6F7;
+  --grad-text-2: #C9CED6;
+  --grad-text-3: #6E767F;
+  --grad-accent-mid: #C9A227;
+  --grad-accent-end: #2DD4BF;
+  --scrollbar-track: #0A1413;
+  --scrollbar-thumb: #21322F;
+  --cursor-ring-border: rgba(201,206,214,.4);
+}
+
+html { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-navy);
+  color: var(--color-light);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.03em; }
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+.plate {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-sky);
+}
+.plate-orange { color: var(--color-orange); }
+
+.contrail { height: 1px; background: linear-gradient(90deg, transparent, rgba(139,146,156,.45), transparent); }
+
+.glass {
+  background: linear-gradient(160deg, var(--glass-1), var(--glass-2));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+@media (max-width: 1024px) {
+  .glass { backdrop-filter: none; background: var(--glass-solid); }
+}
+
+.card-hover {
+  position: relative;
+  isolation: isolate;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), border-color .45s, box-shadow .45s;
+}
+/* cursor-following gold spotlight — --mx/--my set in JS (SpotlightCards) */
+.card-hover::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), rgba(45,212,191,.16), transparent 62%);
+  opacity: 0; transition: opacity .45s ease; will-change: opacity;
+}
+.card-hover > * { position: relative; z-index: 1; }
+.card-hover:hover::before { opacity: 1; }
+.card-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45,212,191,.45);
+  box-shadow: 0 30px 70px -34px rgba(0,0,0,.9), 0 22px 50px -30px rgba(45,212,191,.4), 0 0 0 1px rgba(45,212,191,.12);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-hover, .card-hover:hover { transform: none; }
+}
+
+.grad-text {
+  background: linear-gradient(96deg, var(--grad-text-1) 15%, var(--grad-text-2) 45%, var(--grad-text-3) 85%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.grad-cyan, .grad-gold {
+  background: linear-gradient(96deg, var(--grad-text-1) 25%, var(--grad-accent-mid) 60%, var(--grad-accent-end) 95%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* film grain */
+.noise::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .05; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* engineering grid */
+.egrid {
+  background-image:
+    linear-gradient(rgba(139,146,156,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,146,156,.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.egrid-fine { background-size: 24px 24px; }
+
+/* faded dot matrix — technical texture without the boxy grid lines */
+.dotgrid {
+  background-image: radial-gradient(circle, rgba(139,146,156,.14) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 38%, #000 28%, transparent 78%);
+  mask-image: radial-gradient(ellipse 72% 72% at 50% 38%, #000 28%, transparent 78%);
+}
+
+/* marquee */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* radar sweep */
+@keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* blueprint scan line */
+@keyframes scanline {
+  0%   { top: 4%;  opacity: 0; }
+  12%  { opacity: 0.7; }
+  88%  { opacity: 0.7; }
+  100% { top: 96%; opacity: 0; }
+}
+
+/* custom cursor */
+@media (pointer: fine) {
+  .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 999px; will-change: transform; }
+  .cursor-dot { width: 6px; height: 6px; background: #2DD4BF; }
+  .cursor-ring { width: 36px; height: 36px; border: 1px solid var(--cursor-ring-border); transition: width .25s, height .25s, border-color .25s, background .25s; }
+  .cursor-ring.is-hover { width: 64px; height: 64px; border-color: rgba(45,212,191,.7); background: rgba(45,212,191,.08); }
+}
+
+::selection { background: rgba(45,212,191,.32); color: #0A1413; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 8px; }
+:focus-visible { outline: 2px solid var(--color-sky); outline-offset: 3px; border-radius: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .marquee-track { animation: none; }
+}
