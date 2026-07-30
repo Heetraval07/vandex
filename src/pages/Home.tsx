@@ -54,7 +54,7 @@ function Hero() {
         <HeroFallback />
         {showVideo && (
           <video
-            autoPlay muted loop playsInline preload="metadata"
+            muted loop playsInline preload="metadata"
             onCanPlay={() => setVideoReady(true)}
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1200ms] ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           >
