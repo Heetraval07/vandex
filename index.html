@@ -12,6 +12,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const redirect = sessionStorage.redirect;
+      if (redirect && redirect !== location.pathname) {
+        sessionStorage.removeItem('redirect');
+        history.replaceState(null, '', redirect);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
