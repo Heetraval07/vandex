@@ -32,7 +32,7 @@ const faqs = [
   { q: 'Do I need an account before requesting a quote?', a: 'No. Anyone can request a quotation. A trade account is only needed before an order is placed, and our team will guide you through setup once you are ready.' },
 ];
 
-export function RequestQuote() {
+export default function RequestQuote() {
   const [sent, setSent] = useState(false);
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
     resolver: zodResolver(schema),

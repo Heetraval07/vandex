@@ -3,11 +3,11 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { Layout } from './components/layout';
 
 const Home = lazy(() => import('./pages/Home'));
-const AircraftParts = lazy(() => import('./pages/AircraftParts').then(m => ({ default: m.AircraftParts })));
-const SupplySolutions = lazy(() => import('./pages/SupplySolutions').then(m => ({ default: m.SupplySolutions })));
-const WhyVandex = lazy(() => import('./pages/WhyVandex').then(m => ({ default: m.WhyVandex })));
-const RequestQuote = lazy(() => import('./pages/RequestQuote').then(m => ({ default: m.RequestQuote })));
-const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
+const AircraftParts = lazy(() => import('./pages/AircraftParts'));
+const SupplySolutions = lazy(() => import('./pages/SupplySolutions'));
+const WhyVandex = lazy(() => import('./pages/WhyVandex'));
+const RequestQuote = lazy(() => import('./pages/RequestQuote'));
+const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/RequestQuote').then(m => ({ default: m.NotFound })));
 const Privacy = lazy(() => import('./pages/RequestQuote').then(m => ({ default: m.Privacy })));
 const Terms = lazy(() => import('./pages/RequestQuote').then(m => ({ default: m.Terms })));

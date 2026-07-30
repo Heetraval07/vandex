@@ -42,7 +42,7 @@ const faqs = [
   { q: 'Can I audit VANDEX as a supplier?', a: 'Yes. We welcome customer quality audits and can share our quality process, approved-vendor summary, and sample documentation in advance — contact our team to arrange.' },
 ];
 
-export function WhyVandex() {
+export default function WhyVandex() {
   return (
     <>
       <Seo

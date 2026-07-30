@@ -152,7 +152,7 @@ function CatalogExplorer() {
   );
 }
 
-export function AircraftParts() {
+export default function AircraftParts() {
   return (
     <>
       <Seo

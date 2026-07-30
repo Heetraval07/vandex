@@ -17,7 +17,7 @@ const assurances = [
 
 const services = ['Aircraft parts', 'Supply solutions / AOG', 'Program / partnership', 'Selling surplus to VANDEX', 'Other'];
 
-export function Contact() {
+export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });
   const [sent, setSent] = useState(false);
   const [touched, setTouched] = useState(false);

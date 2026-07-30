@@ -118,7 +118,7 @@ function ServicesExplorer({ list }: { list: Service[] }) {
   );
 }
 
-export function SupplySolutions() {
+export default function SupplySolutions() {
   const aog = serviceBySlug('aog-support')!;
   const others = services.filter((s) => s.slug !== 'aog-support');
 
