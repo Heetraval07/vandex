@@ -9,7 +9,7 @@ import { BtnPrimary, BtnGhost, Reveal, CtaBand } from '../components/ui';
 import { products } from '../data/products';
 import { services } from '../data/content';
 
-/* Lightweight static gold visual — always-present base, shown until the
+/* Lightweight static gold visual: always-present base, shown until the
    hero video is ready (and the sole background on reduced-motion / save-data). */
 function HeroFallback() {
   return (
@@ -83,7 +83,7 @@ function Hero() {
         </h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.75, duration: 0.8 }}
           className="mt-8 max-w-xl text-[15px] leading-relaxed text-silver/85">
-          VANDEX sources, certifies, and delivers aircraft spare parts for airlines, MROs, and operators —
+          VANDEX sources, certifies, and delivers aircraft spare parts for airlines, MROs, and operators,
           with complete documentation on every shipment and AOG requests prioritized around the clock.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.8 }}
@@ -94,7 +94,7 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-70" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-orange" />
             </span>
-            AOG DESK — LIVE 24/7
+            AOG DESK: LIVE 24/7
           </span>
         </motion.div>
       </motion.div>
@@ -115,7 +115,7 @@ function Hero() {
   );
 }
 
-/* ================= TRUST BAR — company value props ================= */
+/* ================= TRUST BAR: company value props ================= */
 function TrustBar() {
   const items = [
     'ASA-100 aligned quality system',
@@ -138,7 +138,7 @@ function TrustBar() {
   );
 }
 
-/* ================= WIREFRAME STORY — draw-on-view airframe ================= */
+/* ================= WIREFRAME STORY: draw-on-view airframe ================= */
 const wfDraw: Variants = {
   hidden: { pathLength: 0, opacity: 0 },
   show: (i = 0) => ({
@@ -226,7 +226,7 @@ function WireframeStory() {
   );
 }
 
-/* ================= PRODUCT SHOWCASE — tilt + spotlight cards ================= */
+/* ================= PRODUCT SHOWCASE: tilt + spotlight cards ================= */
 function TiltCard({ p, i }: { p: (typeof products)[number]; i: number }) {
   const rx = useMotionValue(0), ry = useMotionValue(0);
   const srx = useSpring(rx, { stiffness: 160, damping: 18 });
@@ -247,7 +247,7 @@ function TiltCard({ p, i }: { p: (typeof products)[number]; i: number }) {
           <p className="font-mono text-[10px] tracking-[0.22em] text-sky">{p.ata}</p>
           <h3 className="mt-3 text-xl font-semibold text-light">{p.name}</h3>
           <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{p.tagline}</p>
-          {/* spec sheet slides in — visible on mobile, hover on desktop */}
+          {/* spec sheet slides in: visible on mobile, hover on desktop */}
           <ul className="mt-5 space-y-1.5 max-h-40 opacity-100 transition-all duration-500 md:max-h-0 md:opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100">
             {p.features.slice(0, 3).map((f) => (
               <li key={f} className="flex items-center gap-2 font-mono text-[10.5px] tracking-wide text-silver/80">
@@ -284,7 +284,7 @@ function ProductShowcase() {
   );
 }
 
-/* ================= SERVICES STRIP — interactive hover list ================= */
+/* ================= SERVICES STRIP: interactive hover list ================= */
 function ServicesStrip() {
   return (
     <section className="relative py-24 md:py-32 noise">
@@ -296,7 +296,7 @@ function ServicesStrip() {
               One desk. Nine disciplines.
             </SplitReveal>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted">
-              Procurement, sourcing, AOG, logistics, and documentation — run as a single accountable service.
+              Procurement, sourcing, AOG, logistics, and documentation, run as a single accountable service.
             </p>
           </div>
           <BtnGhost to="/supply-solutions">All nine services</BtnGhost>
@@ -382,11 +382,11 @@ function Quality() {
             {[
               ['FORM', 'FAA 8130-3 / EASA FORM 1'],
               ['PART NO', 'VX-2810-114-01'],
-              ['DESCRIPTION', 'ACTUATOR, TRIM — HORIZ STAB'],
+              ['DESCRIPTION', 'ACTUATOR, TRIM, HORIZ STAB'],
               ['S/N', 'SN-88213'],
               ['CONDITION', 'OVERHAULED'],
               ['TRACE', '121 OPERATOR · BACK-TO-BIRTH'],
-              ['STATUS', 'AIRWORTHY — RELEASED'],
+              ['STATUS', 'AIRWORTHY, RELEASED'],
             ].map(([k, v]) => (
               <div key={k} className="flex justify-between gap-6 border-b border-line/40 py-3">
                 <span className="text-muted">{k}</span>
@@ -406,8 +406,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="VANDEX — Aircraft Spare Parts Supplier in Dubai, UAE"
-        description="VANDEX supplies certified aircraft spare parts, components, and AOG support from Dubai — serving airlines, MROs, and operators across 40+ countries with full traceability."
+        title="VANDEX: Aircraft Spare Parts Supplier in Dubai, UAE"
+        description="VANDEX supplies certified aircraft spare parts, components, and AOG support from Dubai, serving airlines, MROs, and operators across 40+ countries with full traceability."
         path="/"
         schema={[organizationSchema(), websiteSchema(), localBusinessSchema()]}
       />

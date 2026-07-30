@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from 'react';
+import { useLayoutEffect, type ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,7 +9,7 @@ export { gsap, ScrollTrigger };
 export const prefersReduced = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* Native scroll — the Lenis momentum layer was the main source of scroll lag.
+/* Native scroll: the Lenis momentum layer was the main source of scroll lag.
    Kept as a passthrough so callers don't need to change. */
 export function SmoothScroll({ children }: { children: ReactNode }) {
   return <>{children}</>;
@@ -17,7 +17,11 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
 
 export function ScrollToTop() {
   const { pathname, hash } = useLocation();
-  useEffect(() => {
+  // useLayoutEffect (not useEffect): must run before the new page's Reveal/whileInView
+  // observers set up, otherwise on iOS Safari they can observe the stale scroll position
+  // from the previous page and never re-fire once we scroll back to top, leaving content
+  // permanently invisible after client-side navigation.
+  useLayoutEffect(() => {
     // Deep link / cross-page anchor (e.g. /supply-solutions#aog-support): the target
     // section may live inside a lazy page, so poll briefly until it mounts.
     if (hash) {

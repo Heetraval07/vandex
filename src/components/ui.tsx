@@ -6,7 +6,7 @@ import { fadeUp } from '../lib/motion';
 import { Magnetic } from '../lib/fx';
 import logoUrl from '../assets/vandex-logo-header.png';
 
-/* ---------- Logo — VANDEX gold V-mark + wordmark lockup ---------- */
+/* ---------- Logo: VANDEX gold V-mark + wordmark lockup ---------- */
 export function Logo({ className = 'h-10' }: { className?: string }) {
   return (
     <img src={logoUrl} alt="VANDEX" className={`${className} w-auto select-none`} draggable={false} />
@@ -26,13 +26,13 @@ export function ScrollProgress() {
 export function Reveal({ children, delay = 0, className = '' }: { children: ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div className={className} variants={fadeUp} custom={delay} initial="hidden" whileInView="show"
-      viewport={{ once: true, margin: '-60px' }}>
+      viewport={{ once: true, amount: 0 }}>
       {children}
     </motion.div>
   );
 }
 
-/* ---------- FAQ accordion — collapsed by default, expands on click ---------- */
+/* ---------- FAQ accordion: collapsed by default, expands on click ---------- */
 export function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
@@ -84,7 +84,7 @@ export function SectionHead({ plate, title, text, center = false }:
 /* ---------- Counter ---------- */
 export function Counter({ to, suffix = '', label }: { to: number; suffix?: string; label: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-40px' });
+  const inView = useInView(ref, { once: true, amount: 0 });
   const mv = useMotionValue(0);
   const spring = useSpring(mv, { duration: 1800, bounce: 0 });
   useEffect(() => { if (inView) mv.set(to); }, [inView, to, mv]);
@@ -99,7 +99,7 @@ export function Counter({ to, suffix = '', label }: { to: number; suffix?: strin
   );
 }
 
-/* ---------- Buttons — engineered block with orange sweep ---------- */
+/* ---------- Buttons: engineered block with orange sweep ---------- */
 export function BtnPrimary({ to, children }: { to: string; children: ReactNode }) {
   return (
     <Magnetic>
@@ -135,7 +135,7 @@ export function PageHero({ plate, title, text, crumbs }:
         <div className="absolute -bottom-48 left-[-12%] h-[460px] w-[460px] rounded-full bg-blue/[0.06] blur-[160px]" />
         {/* faded dot texture */}
         <div className="absolute inset-0 dotgrid" />
-        {/* radar rings — aviation motif, top-right */}
+        {/* radar rings: aviation motif, top-right */}
         <svg className="absolute -right-28 -top-32 h-[520px] w-[520px] text-sky/[0.12]" viewBox="0 0 400 400" fill="none">
           <circle cx="200" cy="200" r="70" stroke="currentColor" strokeWidth="1" />
           <circle cx="200" cy="200" r="130" stroke="currentColor" strokeWidth="1" strokeDasharray="2 10" />
@@ -184,7 +184,7 @@ export function GridLines() {
   );
 }
 
-/* ---------- CTA band — oversized ---------- */
+/* ---------- CTA band: oversized ---------- */
 export function CtaBand() {
   return (
     <section className="relative overflow-hidden py-28 md:py-40 noise">

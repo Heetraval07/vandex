@@ -40,7 +40,7 @@ export default function App() {
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
 
-          {/* legacy routes — redirect to the current 5-page structure */}
+          {/* legacy routes: redirect to the current 5-page structure */}
           <Route path="why-vandex" element={<Navigate to="/company" replace />} />
           <Route path="about" element={<Navigate to="/company" replace />} />
           <Route path="products" element={<Navigate to="/aircraft-parts" replace />} />

@@ -12,15 +12,15 @@ const metrics = [
 
 const qualitySystem = [
   { icon: ListChecks, t: 'Approved supplier list', d: 'We buy only from vendors on our approved list, reviewed for accreditation, documentation quality, and performance history. Vendors are removed on quality findings, not on price.' },
-  { icon: ShieldCheck, t: 'Documentation review before quotation', d: 'Certification is reviewed against the part before we quote you. Anything that fails review is never offered — which is why we occasionally quote nothing at all on a request.' },
-  { icon: PackageCheck, t: 'Goods-in inspection', d: 'Every receipt is inspected against its documentation — part number, serial number, condition, and physical state — recorded before stock is released.' },
+  { icon: ShieldCheck, t: 'Documentation review before quotation', d: 'Certification is reviewed against the part before we quote you. Anything that fails review is never offered, which is why we occasionally quote nothing at all on a request.' },
+  { icon: PackageCheck, t: 'Goods-in inspection', d: 'Every receipt is inspected against its documentation: part number, serial number, condition, and physical state, all recorded before stock is released.' },
   { icon: ScanSearch, t: 'Traceable records', d: 'Every transaction is recorded from receipt to shipment and retained, so any part we have supplied can be traced years later.' },
 ];
 
 const accreditations = [
   { icon: ShieldCheck, t: 'ASA-100 aligned', d: 'Receiving inspection and vendor-audit discipline aligned to the Aviation Suppliers Association standard for parts distributors.' },
   { icon: PackageCheck, t: 'ISO 9001 principles', d: 'Documented process control across sourcing, receiving, and dispatch.' },
-  { icon: Clock3, t: 'Certificate review first', d: 'Every release document is checked against the part before we quote — not after.' },
+  { icon: Clock3, t: 'Certificate review first', d: 'Every release document is checked against the part before we quote, not after.' },
   { icon: Globe2, t: 'EASA · FAA · GCAA', d: 'Documentation formats accepted by operators regulated under EASA, FAA, and GCAA.' },
 ];
 
@@ -39,14 +39,14 @@ const faqs = [
   { q: 'How do I verify a part’s traceability?', a: 'Traceability is verified by following the documentation chain from the current holder back to the original manufacturer or last approved release, confirming part and serial numbers match at every transfer and no gaps exist. For life-limited parts this extends back to birth. VANDEX supplies this chain with the quotation, so it can be reviewed before purchase.' },
   { q: 'What quality standards does VANDEX operate to?', a: 'Our quality system is aligned to ASA-100 and ISO 9001 principles, covering approved-vendor management, documentation review before quotation, goods-in inspection, and traceable record-keeping. Formal third-party accreditation status is published here as it is achieved.' },
   { q: 'How do you prevent counterfeit or unapproved parts entering your supply chain?', a: 'Through approved-vendor restriction, source-level documentation authentication, physical inspection against expected manufacturer markings, Non-Incident Statements, and serial-number verification. Suspect items are quarantined and reported, never returned to stock.' },
-  { q: 'Can I audit VANDEX as a supplier?', a: 'Yes. We welcome customer quality audits and can share our quality process, approved-vendor summary, and sample documentation in advance — contact our team to arrange.' },
+  { q: 'Can I audit VANDEX as a supplier?', a: 'Yes. We welcome customer quality audits and can share our quality process, approved-vendor summary, and sample documentation in advance. Contact our team to arrange.' },
 ];
 
 export default function WhyVandex() {
   return (
     <>
       <Seo
-        title="Company — Quality, Traceability & Aviation Supply Standards"
+        title="Company: Quality, Traceability & Aviation Supply Standards"
         description="Documented traceability, an audited supplier network, and counterfeit-prevention controls on every component VANDEX supplies. Why airlines, MROs, and operators choose VANDEX."
         path="/company"
         schema={[
@@ -57,11 +57,11 @@ export default function WhyVandex() {
       <PageHero
         plate="Company"
         title="Trust is a process, not a promise"
-        text="Anyone can source a part number. What matters is whether the documentation survives an audit — and that comes down to how a supplier is built."
+        text="Anyone can source a part number. What matters is whether the documentation survives an audit, and that comes down to how a supplier is built."
         crumbs={[{ name: 'Home', path: '/' }, { name: 'Company', path: '/company' }]}
       />
 
-      {/* overview — editorial */}
+      {/* overview: editorial */}
       <section className="mx-auto max-w-[80rem] px-6 py-24 md:py-32">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <Reveal>
@@ -73,7 +73,7 @@ export default function WhyVandex() {
               <p className="text-[15px] leading-relaxed text-muted">
                 VANDEX was founded in Dubai in 2026 to give airlines, MROs, and operators a counterparty that treats
                 documentation, speed, and accountability as one promise, not three. We source, verify, and deliver
-                aircraft spare parts — and we walk away from stock we cannot document, because a component without
+                aircraft spare parts, and we walk away from stock we cannot document, because a component without
                 clean paperwork is not an aircraft part.
               </p>
               <p className="text-[15px] leading-relaxed text-muted">
@@ -82,7 +82,7 @@ export default function WhyVandex() {
                 lanes reaching every continent.
               </p>
               <p className="border-l-2 border-sky/50 pl-5 text-[15px] leading-relaxed text-light/85">
-                Our mission: keep aircraft flying with documentation that clears the first inspection — and grow from
+                Our mission: keep aircraft flying with documentation that clears the first inspection, and grow from
                 parts distribution into managed procurement for global fleets.
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function WhyVandex() {
         </div>
       </section>
 
-      {/* quality system — numbered editorial pillars */}
+      {/* quality system: numbered editorial pillars */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-[80rem] px-6">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
@@ -133,7 +133,7 @@ export default function WhyVandex() {
         </div>
       </section>
 
-      {/* accreditations — hairline divider grid */}
+      {/* accreditations: hairline divider grid */}
       <section className="border-y border-line/50 bg-navy-2/30 py-24 md:py-28">
         <div className="mx-auto max-w-[80rem] px-6">
           <SectionHead plate="Standards we work to" title="Quality, aligned to industry standard"
@@ -150,7 +150,7 @@ export default function WhyVandex() {
         </div>
       </section>
 
-      {/* counterfeit prevention — airy asymmetric */}
+      {/* counterfeit prevention: airy asymmetric */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-[80rem] px-6">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
@@ -175,7 +175,7 @@ export default function WhyVandex() {
         </div>
       </section>
 
-      {/* industries served — hairline divider grid */}
+      {/* industries served: hairline divider grid */}
       <section id="industries" className="scroll-mt-24 border-y border-line/50 bg-navy-2/30 py-24 md:py-28">
         <div className="mx-auto max-w-[80rem] px-6">
           <SectionHead plate="Who we serve" title="Trusted across the aviation supply chain" />
@@ -190,7 +190,7 @@ export default function WhyVandex() {
             <div className="flex flex-col justify-center gap-3 bg-navy p-8">
               <Users className="h-6 w-6 text-sky" />
               <p className="text-[13.5px] leading-relaxed text-muted">
-                Named leadership, credentials, and photography to follow at launch — operating from Dubai, UAE, with
+                Named leadership, credentials, and photography to follow at launch. Operating from Dubai, UAE, with
                 the AOG desk live 24/7.
               </p>
             </div>

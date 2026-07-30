@@ -1,4 +1,4 @@
-// Brand icons (inline SVG — removed from lucide-react)
+// Brand icons (inline SVG, removed from lucide-react)
 type P = { className?: string };
 const base = { fill: 'currentColor', viewBox: '0 0 24 24', 'aria-hidden': true as const };
 

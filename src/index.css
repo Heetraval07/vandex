@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* VANDEX — petrol-green base with a teal accent + brass highlight system */
+  /* VANDEX: petrol-green base with a teal accent + brass highlight system */
   --color-navy: #0A1413;        /* petrol black-green base (legacy token name) */
   --color-navy-2: #10201E;      /* elevated surface */
   --color-navy-3: #17302C;      /* highest surface */
   --color-blue: #0D9488;        /* deep teal (legacy token name) */
-  --color-sky: #2DD4BF;         /* vandex teal — primary accent */
-  --color-teal: #C9A227;        /* brass — secondary highlight (legacy token name) */
-  --color-orange: #E8843C;      /* amber-orange — button sweep / urgent AOG accents */
+  --color-sky: #2DD4BF;         /* vandex teal, primary accent */
+  --color-teal: #C9A227;        /* brass, secondary highlight (legacy token name) */
+  --color-orange: #E8843C;      /* amber-orange, button sweep / urgent AOG accents */
   --color-ink: #0A1413;
-  --color-light: #EAF3F1;       /* off-white — wordmark / text */
+  --color-light: #EAF3F1;       /* off-white, wordmark / text */
   --color-silver: #AFC3BE;
   --color-muted: #7E938D;       /* cool sage gray */
   --color-line: #21322F;
@@ -21,7 +21,7 @@
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
-/* Implementation-detail tokens (not Tailwind palette entries — kept outside @theme
+/* Implementation-detail tokens (not Tailwind palette entries, kept outside @theme
    so they don't generate extra utility classes). Dark is the brand default. */
 :root {
   --glass-1: rgba(16,32,30,.75);
@@ -106,7 +106,7 @@ h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.03em; }
   isolation: isolate;
   transition: transform .45s cubic-bezier(.2,.8,.2,1), border-color .45s, box-shadow .45s;
 }
-/* cursor-following gold spotlight — --mx/--my set in JS (SpotlightCards) */
+/* cursor-following gold spotlight: --mx/--my set in JS (SpotlightCards) */
 .card-hover::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;
   background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), rgba(45,212,191,.16), transparent 62%);
@@ -147,7 +147,7 @@ h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.03em; }
 }
 .egrid-fine { background-size: 24px 24px; }
 
-/* faded dot matrix — technical texture without the boxy grid lines */
+/* faded dot matrix: technical texture without the boxy grid lines */
 .dotgrid {
   background-image: radial-gradient(circle, rgba(139,146,156,.14) 1px, transparent 1.5px);
   background-size: 24px 24px;

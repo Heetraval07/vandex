@@ -31,12 +31,12 @@ export default function Contact() {
   };
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
-  const input = 'w-full rounded-xl border border-line bg-navy-2/60 px-4 py-3 text-sm placeholder:text-muted/50 focus:border-sky transition-colors';
+  const input = 'w-full rounded-xl border border-line bg-navy-2/60 px-4 py-3 text-base sm:text-sm placeholder:text-muted/50 focus:border-sky transition-colors';
 
   return (
     <>
-      <Seo title="Contact VANDEX — Aviation Parts Supply, Dubai UAE"
-        description="Talk to the VANDEX team in Dubai about aircraft parts, AOG support, or supply solutions. Call, WhatsApp, or email — we reply within one business day."
+      <Seo title="Contact VANDEX: Aviation Parts Supply, Dubai UAE"
+        description="Talk to the VANDEX team in Dubai about aircraft parts, AOG support, or supply solutions. Call, WhatsApp, or email, we reply within one business day."
         path="/contact"
         schema={[
           localBusinessSchema(),
@@ -61,7 +61,7 @@ export default function Contact() {
             <p className="plate mb-5">Get in touch</p>
             <h1 className="text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl">Talk to our team</h1>
             <p className="mx-auto mt-7 max-w-xl text-[15px] leading-relaxed text-muted">
-              Whether it's aircraft parts, an AOG on the ground, or a longer-term supply program — tell us what you need
+              Whether it's aircraft parts, an AOG on the ground, or a longer-term supply program, tell us what you need
               and we'll take it from there. Based in Dubai, we reply within one business day.
             </p>
           </Reveal>
@@ -71,14 +71,14 @@ export default function Contact() {
       {/* ---- Info + form ---- */}
       <section className="mx-auto max-w-7xl px-6 pb-28">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
-          {/* left — details */}
+          {/* left: details */}
           <Reveal>
             <p className="plate mb-4">Direct lines</p>
             <h2 className="max-w-md text-4xl font-semibold leading-tight tracking-tight text-light md:text-5xl">
               Let's find the right part for your fleet
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted">
-              Share a bit about what you're after — a part number, a shortage list, or an AOG — and we'll come back with
+              Share a bit about what you're after (a part number, a shortage list, or an AOG) and we'll come back with
               condition, lead time, and documentation stated in writing.
             </p>
 
@@ -117,13 +117,13 @@ export default function Contact() {
             </ul>
           </Reveal>
 
-          {/* right — form */}
+          {/* right: form */}
           <Reveal delay={1}>
             {sent ? (
               <div className="glass flex min-h-[420px] flex-col items-center justify-center rounded-3xl p-10 text-center">
                 <CheckCircle2 className="h-12 w-12 text-teal" />
                 <h3 className="mt-5 text-2xl font-semibold">Message received</h3>
-                <p className="mt-3 max-w-sm text-sm text-muted">We'll reply within one business day. For a grounded aircraft, call or WhatsApp — it's faster.</p>
+                <p className="mt-3 max-w-sm text-sm text-muted">We'll reply within one business day. For a grounded aircraft, call or WhatsApp, it's faster.</p>
               </div>
             ) : (
               <form onSubmit={submit} noValidate className="glass rounded-3xl p-8 md:p-10">

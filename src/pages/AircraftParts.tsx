@@ -13,7 +13,7 @@ const conditionCodes = [
   { code: 'SV', name: 'Serviceable', d: 'Inspected and certified fit for installation, with release documentation.' },
   { code: 'RP', name: 'Repaired', d: 'Specific defect rectified by an approved facility, with release tag.' },
   { code: 'IN', name: 'Inspected / Tested', d: 'Verified serviceable against defined criteria, with inspection record.' },
-  { code: 'AR', name: 'As Removed', d: 'Removed from service, no airworthiness release — sold for repair or teardown.' },
+  { code: 'AR', name: 'As Removed', d: 'Removed from service, no airworthiness release. Sold for repair or teardown.' },
 ];
 
 const documentation = [
@@ -36,19 +36,19 @@ const sourcingSteps = [
   { n: '01', t: 'Request', d: 'Send a part number, description, or shortage list. Aircraft type and required date help us prioritize correctly.' },
   { n: '02', t: 'Source', d: 'We check our network first, then OEM channels, approved surplus, teardown inventory, and partner stock.' },
   { n: '03', t: 'Verify', d: 'Documentation is reviewed against the part before we quote. Anything that fails review is not offered.' },
-  { n: '04', t: 'Quote', d: 'Price, condition, lead time, and documentation type — in writing, within hours.' },
+  { n: '04', t: 'Quote', d: 'Price, condition, lead time, and documentation type, in writing, within hours.' },
   { n: '05', t: 'Deliver', d: 'Packed to specification, DG-compliant where required, with export documentation and tracking.' },
 ];
 
 const faqs = [
-  { q: 'What is the difference between a rotable and an expendable part?', a: 'A rotable is a high-value component that can be economically repaired and returned to service repeatedly — a hydraulic pump, for example. An expendable is discarded once removed or consumed, such as a filter, seal, or fastener. Rotables carry repair history and trace; expendables carry conformance and batch documentation.' },
+  { q: 'What is the difference between a rotable and an expendable part?', a: 'A rotable is a high-value component that can be economically repaired and returned to service repeatedly, a hydraulic pump, for example. An expendable is discarded once removed or consumed, such as a filter, seal, or fastener. Rotables carry repair history and trace; expendables carry conformance and batch documentation.' },
   { q: 'Do you supply PMA parts as well as OEM?', a: 'Where the operator’s approved data permits, yes. PMA parts can offer meaningful cost savings, but acceptability depends on your maintenance programme and regulatory authority. We state clearly on every quotation whether a part is OEM or PMA so the decision stays yours.' },
-  { q: 'What is ATA chapter numbering?', a: 'The ATA 100 system divides aircraft systems into standard numbered chapters — ATA 21 for air conditioning, ATA 32 for landing gear, ATA 34 for navigation, and so on. It gives the industry a common language for classifying parts and technical documentation regardless of manufacturer.' },
+  { q: 'What is ATA chapter numbering?', a: 'The ATA 100 system divides aircraft systems into standard numbered chapters: ATA 21 for air conditioning, ATA 32 for landing gear, ATA 34 for navigation, and so on. It gives the industry a common language for classifying parts and technical documentation regardless of manufacturer.' },
   { q: 'Can you supply life-limited parts?', a: 'Yes, with back-to-birth traceability and verified time-in-service data reviewed before purchase. We do not quote life-limited parts with incomplete records.' },
   { q: 'What if the part I need is obsolete?', a: 'Obsolescence sourcing is a core capability. We work through surplus channels, teardown inventory, and specialist partners, and where the original part is genuinely unavailable we identify approved alternatives rather than leave the request open.' },
 ];
 
-/* ================= CATALOG EXPLORER — one line in view at a time ================= */
+/* ================= CATALOG EXPLORER: one line in view at a time ================= */
 function CatalogExplorer() {
   const { hash } = useLocation();
   const sectionRef = useRef<HTMLElement>(null);
@@ -156,8 +156,8 @@ export default function AircraftParts() {
   return (
     <>
       <Seo
-        title="Aircraft Spare Parts & Aviation Components — Nose-to-Tail Supply"
-        description="Rotables, avionics, engine components, landing gear, electrical systems, consumables, and standard hardware across 12 ATA-indexed product lines — certified, traceable, and shipped from Dubai, UAE."
+        title="Aircraft Spare Parts & Aviation Components: Nose-to-Tail Supply"
+        description="Rotables, avionics, engine components, landing gear, electrical systems, consumables, and standard hardware across 12 ATA-indexed product lines. Certified, traceable, and shipped from Dubai, UAE."
         path="/aircraft-parts"
         schema={[
           breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Aircraft Parts', path: '/aircraft-parts' }]),
@@ -167,13 +167,13 @@ export default function AircraftParts() {
       <PageHero
         plate="Parts & components"
         title="Aircraft spare parts, supplied with complete documentation"
-        text="Rotables, avionics, engine components, consumables, and standard hardware across the full ATA range — sourced through verified channels and delivered with airworthiness certification on every line."
+        text="Rotables, avionics, engine components, consumables, and standard hardware across the full ATA range, sourced through verified channels and delivered with airworthiness certification on every line."
         crumbs={[{ name: 'Home', path: '/' }, { name: 'Aircraft Parts', path: '/aircraft-parts' }]}
       />
 
       <CatalogExplorer />
 
-      {/* fleet coverage — slim divider grid */}
+      {/* fleet coverage: slim divider grid */}
       <section className="py-24 md:py-28">
         <div className="mx-auto max-w-[80rem] px-6">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
@@ -182,7 +182,7 @@ export default function AircraftParts() {
               <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Sourced across the platforms you fly</h2>
               <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
                 Our sourcing is part-number-driven, not fleet-restricted. Do not see your platform? Send the part
-                number and aircraft type — we confirm availability.
+                number and aircraft type, we confirm availability.
               </p>
             </Reveal>
             <Reveal delay={1}>
@@ -199,7 +199,7 @@ export default function AircraftParts() {
         </div>
       </section>
 
-      {/* condition codes — elegant reference table */}
+      {/* condition codes: elegant reference table */}
       <section className="border-y border-line/50 bg-navy-2/30 py-24 md:py-28">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHead plate="Condition codes, explained" title="Know exactly what you're buying"
@@ -222,7 +222,7 @@ export default function AircraftParts() {
         </div>
       </section>
 
-      {/* documentation standards — airy asymmetric layout */}
+      {/* documentation standards: airy asymmetric layout */}
       <section className="py-24 md:py-28">
         <div className="mx-auto max-w-[80rem] px-6">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -231,7 +231,7 @@ export default function AircraftParts() {
               <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">What arrives with your part</h2>
               <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted">
                 A component without correct paperwork is not an aircraft part. Every shipment carries the airworthiness
-                release appropriate to the part and its condition — reviewed before we quote, not after you commit.
+                release appropriate to the part and its condition, reviewed before we quote, not after you commit.
               </p>
             </Reveal>
             <div className="grid gap-x-12 gap-y-8 sm:grid-cols-2">
@@ -277,7 +277,7 @@ export default function AircraftParts() {
               <p className="plate plate-orange mb-4">Hard-to-find &amp; obsolescence</p>
               <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">Can&apos;t find a part number in the catalog? Send it anyway.</h2>
               <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
-                Obsolescence sourcing is a core capability — worked through OEM channels, approved surplus, teardown
+                Obsolescence sourcing is a core capability, worked through OEM channels, approved surplus, teardown
                 inventory, and our partner network. Where a part is genuinely unavailable, we say so and propose an
                 alternative rather than leave a request open.
               </p>

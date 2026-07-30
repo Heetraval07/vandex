@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 /**
  * Signature visual: dotted world with great-circle flight arcs radiating from Dubai.
- * Pure SVG — no image assets. Arcs draw on scroll into view.
+ * Pure SVG, no image assets. Arcs draw on scroll into view.
  */
 const DXB = { x: 560, y: 205 };
 const dests = [
@@ -86,7 +86,7 @@ export function RouteMap({ className = '' }: { className?: string }) {
   );
 }
 
-/** Minimal aircraft plan-view line art — blueprint style, no photo assets needed. */
+/** Minimal aircraft plan-view line art, blueprint style, no photo assets needed. */
 export function AircraftSchematic({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 400 400" className={className} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.2">

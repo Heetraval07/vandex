@@ -13,8 +13,8 @@ const schema = z.object({
   company: z.string().min(2, 'Please enter your company'),
   email: z.string().email('Please enter a valid email'),
   phone: z.string().optional(),
-  type: z.enum(['RFQ / Quotation', 'AOG — Aircraft on Ground', 'Program / Partnership', 'Surplus sale to VANDEX', 'Other']),
-  message: z.string().min(10, 'Tell us a little more — part numbers help'),
+  type: z.enum(['RFQ / Quotation', 'AOG (Aircraft on Ground)', 'Program / Partnership', 'Surplus sale to VANDEX', 'Other']),
+  message: z.string().min(10, 'Tell us a little more, part numbers help'),
 });
 type FormData = z.infer<typeof schema>;
 
@@ -26,8 +26,8 @@ const commitments = [
 ];
 
 const faqs = [
-  { q: 'What information do you need to quote a part?', a: 'At minimum, the part number and quantity. Aircraft type, condition required, and required date let us prioritise correctly and quote the right option first time. If you only have a description, send that — we can often identify the correct part number from it.' },
-  { q: 'Can I submit a full shortage list rather than individual parts?', a: 'Yes — paste a list directly into the message field or attach a file by email. There is no line limit and consolidated lists are quoted line by line.' },
+  { q: 'What information do you need to quote a part?', a: 'At minimum, the part number and quantity. Aircraft type, condition required, and required date let us prioritise correctly and quote the right option first time. If you only have a description, send that, we can often identify the correct part number from it.' },
+  { q: 'Can I submit a full shortage list rather than individual parts?', a: 'Yes, paste a list directly into the message field or attach a file by email. There is no line limit and consolidated lists are quoted line by line.' },
   { q: 'Is my requirement information kept confidential?', a: 'Yes. Part numbers, quantities, and requirement schedules are commercially sensitive and treated as confidential. We do not share requirement data with third parties beyond what is necessary to source the part.' },
   { q: 'Do I need an account before requesting a quote?', a: 'No. Anyone can request a quotation. A trade account is only needed before an order is placed, and our team will guide you through setup once you are ready.' },
 ];
@@ -42,12 +42,12 @@ export default function RequestQuote() {
     await new Promise((r) => setTimeout(r, 700)); // wire to API/email service in production
     setSent(true);
   };
-  const input = 'w-full rounded-xl border border-line bg-navy-2/60 px-4 py-3 text-sm placeholder:text-muted/50 focus:border-sky transition-colors';
+  const input = 'w-full rounded-xl border border-line bg-navy-2/60 px-4 py-3 text-base sm:text-sm placeholder:text-muted/50 focus:border-sky transition-colors';
   const err = (m?: string) => m && <p role="alert" className="mt-1.5 text-xs text-red-400">{m}</p>;
 
   return (
     <>
-      <Seo title="Request a Quote — Aircraft Parts RFQ | Dubai, UAE"
+      <Seo title="Request a Quote: Aircraft Parts RFQ | Dubai, UAE"
         description="Send a part number and receive a written quote from VANDEX, with condition, lead time, and documentation stated. AOG requests get priority handling, 24/7, from Dubai, UAE."
         path="/request-a-quote"
         schema={[
@@ -66,7 +66,7 @@ export default function RequestQuote() {
               <div className="glass flex min-h-[420px] flex-col items-center justify-center rounded-3xl p-10 text-center">
                 <CheckCircle2 className="h-12 w-12 text-teal" />
                 <h2 className="mt-5 text-2xl font-semibold">Request received</h2>
-                <p className="mt-3 max-w-sm text-sm text-muted">Our desk will reply shortly. For AOG, call or WhatsApp now — it's faster.</p>
+                <p className="mt-3 max-w-sm text-sm text-muted">Our desk will reply shortly. For AOG, call or WhatsApp now, it's faster.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} noValidate className="glass rounded-3xl p-8 md:p-10">
@@ -93,7 +93,7 @@ export default function RequestQuote() {
                   <div className="sm:col-span-2">
                     <label htmlFor="type" className="plate mb-2 block">Enquiry type</label>
                     <select id="type" className={input} {...register('type')}>
-                      {['RFQ / Quotation', 'AOG — Aircraft on Ground', 'Program / Partnership', 'Surplus sale to VANDEX', 'Other'].map((o) => <option key={o}>{o}</option>)}
+                      {['RFQ / Quotation', 'AOG (Aircraft on Ground)', 'Program / Partnership', 'Surplus sale to VANDEX', 'Other'].map((o) => <option key={o}>{o}</option>)}
                     </select>
                   </div>
                   <div className="sm:col-span-2">
@@ -116,7 +116,7 @@ export default function RequestQuote() {
                 <p className="plate mb-5">Direct lines</p>
                 <ul className="space-y-4 text-sm">
                   <li><a className="flex items-center gap-3 text-light/85 hover:text-sky" href="tel:+97140000000"><Phone className="h-4.5 w-4.5 text-sky" /> +971 4 000 0000</a></li>
-                  <li><a className="flex items-center gap-3 text-light/85 hover:text-teal" href="https://wa.me/971521927376" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4.5 w-4.5 text-teal" /> WhatsApp — +971 52 192 7376</a></li>
+                  <li><a className="flex items-center gap-3 text-light/85 hover:text-teal" href="https://wa.me/971521927376" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4.5 w-4.5 text-teal" /> WhatsApp: +971 52 192 7376</a></li>
                   <li><a className="flex items-center gap-3 text-light/85 hover:text-sky" href="mailto:info@vandex.ae"><Mail className="h-4.5 w-4.5 text-sky" /> info@vandex.ae</a></li>
                 </ul>
                 <div className="contrail my-6" />
@@ -132,7 +132,7 @@ export default function RequestQuote() {
               </div>
             </Reveal>
             <Reveal delay={2}>
-              <div className="glass relative aspect-[4/3] overflow-hidden rounded-3xl" role="img" aria-label="Map placeholder — VANDEX Dubai headquarters">
+              <div className="glass relative aspect-[4/3] overflow-hidden rounded-3xl" role="img" aria-label="Map placeholder: VANDEX Dubai headquarters">
                 <GridLines />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_55%_45%,rgba(45,212,191,.22),transparent_55%)]" />
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
@@ -140,7 +140,7 @@ export default function RequestQuote() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal opacity-70" />
                     <span className="relative inline-flex h-3 w-3 rounded-full bg-teal" />
                   </span>
-                  <p className="mt-3 font-mono text-[11px] tracking-[0.18em] text-light/80 uppercase">Google Maps embed — placeholder</p>
+                  <p className="mt-3 font-mono text-[11px] tracking-[0.18em] text-light/80 uppercase">Google Maps embed (placeholder)</p>
                   <p className="font-mono text-[11px] tracking-[0.18em] text-muted uppercase">25.19° N · 55.27° E</p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function RequestQuote() {
 export function NotFound() {
   return (
     <>
-      <Seo title="404 — Page Not Found" description="The page you requested was not found on VANDEX." path="/404" noindex />
+      <Seo title="404: Page Not Found" description="The page you requested was not found on VANDEX." path="/404" noindex />
       <section className="flex min-h-svh items-center justify-center px-6 pt-24 text-center">
         <div>
           <p className="plate">Error 404 · Off the flight plan</p>
@@ -198,7 +198,7 @@ export function NotFound() {
 function Legal({ title, path, children }: { title: string; path: string; children: ReactNode }) {
   return (
     <>
-      <Seo title={title} description={`${title} for VANDEX — UAE aviation supply company.`} path={path} noindex />
+      <Seo title={title} description={`${title} for VANDEX, UAE aviation supply company.`} path={path} noindex />
       <PageHero plate="Legal" title={title} crumbs={[{ name: 'Home', path: '/' }, { name: title, path }]} />
       <section className="mx-auto max-w-3xl px-6 py-16 text-[15px] leading-relaxed text-light/80 [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:text-lg [&_h2]:font-semibold [&_h2]:text-light [&_p]:mb-4">
         {children}

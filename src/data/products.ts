@@ -1,7 +1,7 @@
 export interface ProductCategory {
   slug: string;
   name: string;
-  ata: string;          // ATA chapter reference — aviation taxonomy
+  ata: string;          // ATA chapter reference (aviation taxonomy)
   tagline: string;
   description: string;
   features: string[];

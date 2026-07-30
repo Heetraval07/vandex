@@ -16,20 +16,20 @@ const commitments = [
 const aogSteps = [
   ['Call or submit', 'AOG line or priority form, 24/7/365'],
   ['Sourced immediately', 'Network checked first, then partners worldwide'],
-  ['Quoted fast', 'Price, condition, documentation, and ETA — target 2 hours'],
+  ['Quoted fast', 'Price, condition, documentation, and ETA, target 2 hours'],
   ['Moving same day', 'Booked, packed, and tendered on approval'],
   ['Tracked to the gate', 'Direct contact until the part is signed for'],
 ];
 
 const faqs = [
-  { q: 'What does AOG mean?', a: 'AOG stands for Aircraft on Ground — an aircraft that cannot fly until a defect is rectified, usually because a required part is unavailable. AOG requests take priority over all other work in our supply chain because every hour has a direct, measurable cost to the operator.' },
+  { q: 'What does AOG mean?', a: 'AOG stands for Aircraft on Ground: an aircraft that cannot fly until a defect is rectified, usually because a required part is unavailable. AOG requests take priority over all other work in our supply chain because every hour has a direct, measurable cost to the operator.' },
   { q: 'How does consignment stock work commercially?', a: 'VANDEX funds and manages the inventory. It can be held at your facility or reserved for you within our network, with stock levels reviewed against actual usage so slow-moving items are removed rather than left in place.' },
   { q: 'Can you manage repairs on components you did not supply?', a: 'Yes. Repair management is offered independently of parts supply. We route to approved facilities, control cost and turnaround, and return the unit with complete release documentation.' },
   { q: 'Do you handle dangerous goods shipments?', a: 'Yes. Batteries, oxygen generators, chemicals, and other regulated items are packed, declared, and labelled to IATA Dangerous Goods Regulations by trained staff.' },
-  { q: 'Do you work with airlines, MROs, and operators directly, or only through brokers?', a: 'Directly. VANDEX is the counterparty on every transaction — sourcing, quality, logistics, and documentation stay under one accountable desk regardless of your fleet size.' },
+  { q: 'Do you work with airlines, MROs, and operators directly, or only through brokers?', a: 'Directly. VANDEX is the counterparty on every transaction. Sourcing, quality, logistics, and documentation stay under one accountable desk regardless of your fleet size.' },
 ];
 
-/* ================= SERVICES EXPLORER — one capability in view at a time ================= */
+/* ================= SERVICES EXPLORER: one capability in view at a time ================= */
 function ServicesExplorer({ list }: { list: Service[] }) {
   const { hash } = useLocation();
   const sectionRef = useRef<HTMLElement>(null);
@@ -126,7 +126,7 @@ export default function SupplySolutions() {
     <>
       <Seo
         title="AOG Support & Aircraft Parts Supply Solutions"
-        description="24/7 AOG support, global procurement, repair management, inventory and consignment programs, worldwide logistics, and vendor-managed sourcing — aviation supply solutions from Dubai, UAE."
+        description="24/7 AOG support, global procurement, repair management, inventory and consignment programs, worldwide logistics, and vendor-managed sourcing: aviation supply solutions from Dubai, UAE."
         path="/supply-solutions"
         schema={[
           breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Supply Solutions', path: '/supply-solutions' }]),
@@ -140,7 +140,7 @@ export default function SupplySolutions() {
         crumbs={[{ name: 'Home', path: '/' }, { name: 'Supply Solutions', path: '/supply-solutions' }]}
       />
 
-      {/* AOG — hero-weight standout */}
+      {/* AOG: hero-weight standout */}
       <section id={aog.slug} className="scroll-mt-24 relative overflow-hidden border-y border-orange/20 bg-navy-2/50 py-24 md:py-28 noise">
         <div aria-hidden className="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-orange/[0.07] blur-[130px]" />
         <div className="relative mx-auto max-w-[80rem] px-6">
@@ -187,10 +187,10 @@ export default function SupplySolutions() {
         </div>
       </section>
 
-      {/* the rest of the supply chain — interactive explorer */}
+      {/* the rest of the supply chain: interactive explorer */}
       <ServicesExplorer list={others} />
 
-      {/* service commitments — premium divider grid */}
+      {/* service commitments: premium divider grid */}
       <section className="border-y border-line/50 bg-navy-2/30 py-24 md:py-28">
         <div className="mx-auto max-w-[80rem] px-6">
           <SectionHead plate="What we commit to" title="Service commitments" />
