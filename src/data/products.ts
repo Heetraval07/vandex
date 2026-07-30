@@ -35,7 +35,7 @@ export const products: ProductCategory[] = [
     ata: 'ATA 29',
     tagline: 'Pumps, actuators, valves, and reservoirs for every pressure system.',
     description:
-      'VANDEX maintains sourcing depth in engine-driven pumps, electric pumps, PTUs, actuators, and hydraulic valves — the components that ground aircraft fastest when they fail. Our AOG desk prioritizes hydraulic requests around the clock.',
+      'VANDEX maintains deep sourcing for engine-driven pumps, electric pumps, PTUs, actuators, and hydraulic valves (the components that ground aircraft fastest when they fail). Our AOG desk prioritizes hydraulic requests around the clock.',
     features: ['24/7 AOG priority handling', 'Overhauled with full shop findings', 'Hose and fitting programs', 'Serviceable exchange pool access'],
     applications: ['Primary flight controls', 'Landing gear actuation', 'Braking systems', 'Cargo door systems'],
   },
@@ -45,7 +45,7 @@ export const products: ProductCategory[] = [
     ata: 'ATA 32',
     tagline: 'Gear assemblies, wheels, brakes, and steering components.',
     description:
-      'Complete landing gear assemblies, shock struts, wheels, brake units, and anti-skid components — sourced against cycle limits and delivered with full life records so your planning team can slot parts directly into check packages.',
+      'Complete landing gear assemblies, shock struts, wheels, brake units, and anti-skid components sourced against cycle limits. Full life records delivered so your planning team can slot parts directly into check packages.',
     features: ['Cycle and life-limit verification', 'Gear exchange programs', 'Wheel and brake pool support', 'Chrome and OH condition options'],
     applications: ['Heavy checks and gear swaps', 'Wheel & brake consumption programs', 'Lease-return preparation', 'AOG gear events'],
   },
@@ -55,7 +55,7 @@ export const products: ProductCategory[] = [
     ata: 'ATA 72–80',
     tagline: 'LRUs, QEC hardware, and engine accessories for major platforms.',
     description:
-      'VANDEX supports CFM56, LEAP, V2500, PW1100G, and GE90 operators with fuel controls, ignition systems, starters, sensors, and QEC components — with disk and blade trading handled under strict document review.',
+      'VANDEX supports CFM56, LEAP, V2500, PW1100G, and GE90 operators with fuel controls, ignition systems, starters, sensors, and QEC components. Disk and blade trading is handled under strict document review.',
     features: ['Strict trace and non-incident statements', 'LLP document review protocol', 'Boroscope-supported condition reports', 'Engine teardown channel access'],
     applications: ['Engine shop visits', 'QEC build-up', 'On-wing maintenance', 'LRU exchange programs'],
   },
@@ -65,7 +65,7 @@ export const products: ProductCategory[] = [
     ata: 'ATA 24 / 33',
     tagline: 'Power generation, distribution, batteries, and lighting.',
     description:
-      'Generators, TRUs, static inverters, batteries, contactors, and interior or exterior lighting — supplied with capacity test results and shelf-life verification, so what arrives is ready to install.',
+      'Generators, TRUs, static inverters, batteries, contactors, and interior or exterior lighting supplied with capacity test results and shelf-life verification. Everything arrives ready to install.',
     features: ['Capacity-tested batteries', 'Shelf-life reporting', 'LED retrofit sourcing', 'Harness and connector programs'],
     applications: ['Power system maintenance', 'Cabin and exterior lighting', 'Battery replacement cycles', 'Retrofit modifications'],
   },
@@ -75,7 +75,7 @@ export const products: ProductCategory[] = [
     ata: 'ATA 25',
     tagline: 'Seats, galleys, lavatory hardware, and emergency equipment.',
     description:
-      'VANDEX sources cabin hardware from seat actuation and IFE components to galley inserts, oxygen equipment, slides, and vests — with burn certificates and DOM verification handled before quotation, not after delivery.',
+      'VANDEX sources cabin hardware from seat actuation and IFE components to galley inserts, oxygen equipment, slides, and vests. Burn certificates and DOM verification are handled before quotation, not after delivery.',
     features: ['Flammability certification on file', 'DOM and expiry verification', 'Slide and raft repair routing', 'Cabin refurbishment kits'],
     applications: ['Cabin refurbishment', 'Emergency equipment replacement', 'Galley and lavatory maintenance', 'Seat programs'],
   },
@@ -85,7 +85,7 @@ export const products: ProductCategory[] = [
     ata: 'NAS / MS / AN / BAC',
     tagline: 'Certified aerospace hardware in program quantities.',
     description:
-      'Hi-Loks, rivets, bolts, nuts, washers, clamps, and bearings to NAS, MS, AN, and BAC standards — batch-traceable, with mill certificates and manufacturer CoCs, packaged for stores-ready receiving.',
+      'Hi-Loks, rivets, bolts, nuts, washers, clamps, and bearings to NAS, MS, AN, and BAC standards. Batch-traceable with mill certificates and manufacturer CoCs, packaged for stores-ready receiving.',
     features: ['Batch traceability with mill certs', 'Kitting to work-order level', 'Min/max replenishment programs', 'Counterfeit-part screening'],
     applications: ['Structures and heavy checks', 'Line maintenance stock', 'Kitting for modifications', 'Stores replenishment'],
   },
@@ -95,7 +95,7 @@ export const products: ProductCategory[] = [
     ata: 'CHEM / EXP',
     tagline: 'Chemicals, sealants, lubricants, filters, and expendables.',
     description:
-      'Shelf-life-managed supply of sealants, adhesives, lubricants, hydraulic fluid, filters, O-rings, and gaskets — with cold-chain handling where required and remaining-life guarantees agreed at order.',
+      'Shelf-life-managed supply of sealants, adhesives, lubricants, hydraulic fluid, filters, O-rings, and gaskets. Cold-chain handling where required and remaining-life guarantees agreed at order.',
     features: ['Minimum 75% shelf life on delivery', 'Cold-chain and hazmat handling', 'SDS documentation included', 'Scheduled consumption programs'],
     applications: ['Base and line maintenance', 'Composite repair shops', 'Paint and sealing operations', 'Component workshops'],
   },
@@ -105,7 +105,7 @@ export const products: ProductCategory[] = [
     ata: 'POOL',
     tagline: 'High-value rotable inventory with flexible exchange terms.',
     description:
-      'Access a managed pool of high-demand rotables across ATA chapters with outright, exchange, flat-rate exchange, and loan structures — engineered to keep your capital in the fleet, not on the shelf.',
+      'Access a managed pool of high-demand rotables across ATA chapters with outright, exchange, flat-rate exchange, and loan structures. Keep your capital in the fleet, not on the shelf.',
     features: ['Exchange, loan, and outright terms', 'Core return management', 'Repair administration included', 'Pool access agreements'],
     applications: ['Component support agreements', 'AOG exchanges', 'Working capital reduction', 'Fleet entry-into-service'],
   },
@@ -115,7 +115,7 @@ export const products: ProductCategory[] = [
     ata: 'OEM',
     tagline: 'Factory-new parts direct from manufacturer channels.',
     description:
-      'Through established OEM and authorized-distributor relationships, VANDEX procures factory-new components with manufacturer certification — consolidating multi-OEM orders into a single delivery and a single invoice.',
+      'Through established OEM and authorized-distributor relationships, VANDEX procures factory-new components with manufacturer certification. Consolidate multi-OEM orders into a single delivery and invoice.',
     features: ['Manufacturer CoC on every line', 'Multi-OEM order consolidation', 'Lead-time monitoring and expediting', 'Warranty administration'],
     applications: ['New aircraft entry-into-service', 'Warranty-sensitive replacements', 'Mod and SB embodiment', 'Provisioning programs'],
   },

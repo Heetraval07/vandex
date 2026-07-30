@@ -16,7 +16,7 @@ const nav = [
   { to: '/request-a-quote', label: 'Request a Quote' },
 ];
 
-/* Company dropdown — the label opens the page; items jump to sections. */
+/* Company dropdown: label opens the page, items jump to sections */
 const companyMenu = [
   { to: '/company', name: 'About Us', caption: 'Who we are & why operators choose us', Icon: Building2 },
   { to: '/company#industries', name: 'Industries We Serve', caption: 'Airlines, MROs, charter, distributors', Icon: Users2 },
@@ -52,7 +52,7 @@ export function Layout() {
   );
 }
 
-/* Floating contact rail — call, email, WhatsApp, one tap from anywhere. */
+/* Floating contact rail: call, email, WhatsApp, one tap from anywhere */
 function FloatingContact() {
   const [showTop, setShowTop] = useState(false);
   useEffect(() => {
@@ -69,7 +69,7 @@ function FloatingContact() {
   ];
   return (
     <div className="fixed right-4 bottom-24 z-40 flex flex-col items-center gap-3.5 sm:right-5 lg:bottom-6">
-      {/* back to top — appears after scrolling, stays put */}
+      {/* back to top: appears after scrolling, stays put */}
       <AnimatePresence>
         {showTop && (
           <motion.button key="to-top" type="button" aria-label="Back to top" data-cursor
@@ -100,7 +100,7 @@ function FloatingContact() {
   );
 }
 
-/* Persistent mobile conversion bar — Call AOG + Request a Quote, always one tap away. */
+/* Persistent mobile conversion bar: Call AOG + Request a Quote, always one tap away */
 function MobileActionBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-line/60 bg-navy-2 lg:hidden">
@@ -134,7 +134,7 @@ function RouteWipe() {
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
-/* Language switcher — English / Arabic. Visual toggle; Arabic content is a future task. */
+/* Language switcher: English / Arabic (visual toggle only) */
 function LangToggle() {
   const [lang, setLang] = useState<'EN' | 'AR'>('EN');
   return (
@@ -216,7 +216,7 @@ function Header() {
   return (
     <>
       <header className={`fixed inset-x-0 top-0 z-50 transform-gpu border-b backface-hidden transition-colors duration-500 ${scrolled ? 'border-line/60 bg-navy/90' : 'border-transparent bg-transparent'}`}>
-        {/* top utility bar — contact + location + socials + language */}
+        {/* top utility bar: contact + location + socials + language */}
         <div className={`hidden overflow-hidden border-b transition-all duration-500 lg:block ${scrolled ? 'max-h-0 border-transparent opacity-0' : 'max-h-12 border-line/30 opacity-100'}`}>
           <div className="mx-auto flex max-w-[80rem] items-center justify-between px-6 py-2.5 text-[12px]">
             <div className="flex items-center gap-6">
