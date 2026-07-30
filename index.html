@@ -9,13 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>VANDEX — Aircraft Spare Parts Supplier in UAE</title>
     <meta name="description" content="Dubai-based aircraft spare parts supplier delivering certified aviation components, 24/7 AOG support, and worldwide aviation logistics." />
-    <script type="module" crossorigin src="/vandex/assets/index-DsNqAZwY.js"></script>
+    <script type="module" crossorigin src="/vandex/assets/index-D60c-RhK.js"></script>
     <link rel="modulepreload" crossorigin href="/vandex/assets/rolldown-runtime-CNC7AqOf.js">
     <link rel="modulepreload" crossorigin href="/vandex/assets/motion-B78MxRLb.js">
     <link rel="modulepreload" crossorigin href="/vandex/assets/vendor-CiG_d86b.js">
     <link rel="stylesheet" crossorigin href="/vandex/assets/index-C5dnW3eC.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      const redirect = sessionStorage.redirect;
+      if (redirect && redirect !== location.pathname) {
+        sessionStorage.removeItem('redirect');
+        history.replaceState(null, '', redirect);
+      }
+    </script>
   </body>
 </html>
