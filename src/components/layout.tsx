@@ -291,14 +291,14 @@ function Header() {
               <Logo />
               <button className="p-2 text-light" onClick={() => setOpen(false)} aria-label="Close menu" data-cursor><X /></button>
             </div>
-            <nav className="flex flex-1 flex-col justify-center gap-0 px-8 md:px-16" aria-label="Menu">
+            <nav className="flex flex-1 flex-col justify-center gap-0 px-6 sm:px-8 md:px-16" aria-label="Menu">
               {nav.map((n, i) => (
                 <div key={n.to} className="overflow-hidden border-b border-line/40">
                   <motion.div initial={{ y: '110%' }} animate={{ y: 0 }} exit={{ y: '110%' }}
                     transition={{ duration: 0.6, ease, delay: 0.04 * i }}>
                     <NavLink to={n.to} onClick={() => setOpen(false)} data-cursor
                       className={({ isActive }) =>
-                        `group flex items-baseline gap-5 py-3 md:py-4 font-display text-4xl md:text-6xl font-semibold tracking-tight transition-colors ${isActive ? 'text-sky' : 'text-silver hover:text-light'}`}>
+                        `group flex items-baseline gap-3 sm:gap-5 py-3 md:py-4 font-display text-2xl sm:text-4xl md:text-6xl font-semibold tracking-tight transition-colors ${isActive ? 'text-sky' : 'text-silver hover:text-light'}`}>
                       <span className="font-mono text-[11px] tracking-[0.2em] text-muted">{String(i + 1).padStart(2, '0')}</span>
                       {n.label}
                       <ArrowUpRight className="ml-auto h-6 w-6 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-y-1 text-sky" />
@@ -307,7 +307,7 @@ function Header() {
                 </div>
               ))}
             </nav>
-            <div className="space-y-5 px-8 md:px-16 py-8">
+            <div className="space-y-5 px-6 sm:px-8 md:px-16 py-8">
               <div className="grid grid-cols-2 gap-3">
                 <a href="tel:+97140000000" data-cursor
                   className="flex items-center justify-center gap-2 border border-orange/40 bg-orange/10 py-3.5 text-sm font-semibold text-orange">

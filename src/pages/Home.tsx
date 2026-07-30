@@ -247,15 +247,15 @@ function TiltCard({ p, i }: { p: (typeof products)[number]; i: number }) {
           <p className="font-mono text-[10px] tracking-[0.22em] text-sky">{p.ata}</p>
           <h3 className="mt-3 text-xl font-semibold text-light">{p.name}</h3>
           <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{p.tagline}</p>
-          {/* spec sheet slides in */}
-          <ul className="mt-5 space-y-1.5 max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
+          {/* spec sheet slides in — visible on mobile, hover on desktop */}
+          <ul className="mt-5 space-y-1.5 max-h-40 opacity-100 transition-all duration-500 md:max-h-0 md:opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100">
             {p.features.slice(0, 3).map((f) => (
               <li key={f} className="flex items-center gap-2 font-mono text-[10.5px] tracking-wide text-silver/80">
                 <span className="h-px w-3 bg-orange" />{f}
               </li>
             ))}
           </ul>
-          <Link to={`/aircraft-parts#${p.slug}`} data-cursor className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-silver transition-colors group-hover:text-sky">
+          <Link to={`/aircraft-parts#${p.slug}`} data-cursor className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-silver transition-colors md:group-hover:text-sky">
             View line <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
@@ -267,7 +267,7 @@ function ProductShowcase() {
   return (
     <section className="relative py-24 md:py-36 bg-navy-2/30 noise">
       <div className="mx-auto max-w-[80rem] px-6">
-        <div className="flex flex-wrap items-end justify-between gap-8 mb-14 md:mb-20">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap items-end justify-between gap-6 sm:gap-8 mb-14 md:mb-20">
           <div className="max-w-2xl">
             <p className="plate mb-5">Product lines</p>
             <SplitReveal className="text-4xl md:text-6xl font-semibold leading-[0.98] tracking-tight">
@@ -289,7 +289,7 @@ function ServicesStrip() {
   return (
     <section className="relative py-24 md:py-32 noise">
       <div className="mx-auto max-w-[80rem] px-6">
-        <div className="mb-14 flex flex-wrap items-end justify-between gap-8 md:mb-20">
+        <div className="mb-14 flex flex-col sm:flex-row sm:flex-wrap items-end justify-between gap-6 sm:gap-8 md:mb-20">
           <div className="max-w-2xl">
             <p className="plate mb-5">Services</p>
             <SplitReveal className="text-4xl md:text-6xl font-semibold leading-[0.98] tracking-tight">
