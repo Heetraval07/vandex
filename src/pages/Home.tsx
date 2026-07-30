@@ -58,7 +58,7 @@ function Hero() {
             onCanPlay={() => setVideoReady(true)}
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1200ms] ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
           </video>
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/60 to-navy/20" />
