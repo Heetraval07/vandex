@@ -20,7 +20,7 @@ type FormData = z.infer<typeof schema>;
 
 const commitments = [
   ['Standard RFQ', 'Quoted within business hours'],
-  ['AOG request', 'Priority handling, target 2 hours, 24/7'],
+  ['AOG request', 'Priority handling, target 2 hours'],
   ['Documentation', 'Stated on the quotation, before purchase'],
   ['Confidentiality', 'Your requirements are treated as commercially confidential'],
 ];
@@ -48,7 +48,7 @@ export default function RequestQuote() {
   return (
     <>
       <Seo title="Request a Quote: Aircraft Parts RFQ | Dubai, UAE"
-        description="Send a part number and receive a written quote from VANDEX, with condition, lead time, and documentation stated. AOG requests get priority handling, 24/7, from Dubai, UAE."
+        description="Send a part number and receive a written quote from VANDEX, with condition, lead time, and documentation stated. AOG requests get priority handling from Dubai, UAE."
         path="/request-a-quote"
         schema={[
           localBusinessSchema(),
@@ -56,7 +56,7 @@ export default function RequestQuote() {
           faqSchema(faqs),
         ]} />
       <PageHero plate="Request a quote" title="Send a part number. Get a real answer."
-        text="Standard requests are quoted within business hours, with condition, lead time, and documentation stated in writing. AOG requests get priority handling, any hour of any day."
+        text="Standard requests are quoted within business hours, with condition, lead time, and documentation stated in writing. AOG requests get priority handling."
         crumbs={[{ name: 'Home', path: '/' }, { name: 'Request a Quote', path: '/request-a-quote' }]} />
 
       <section className="mx-auto max-w-7xl px-6 py-20">
@@ -122,7 +122,7 @@ export default function RequestQuote() {
                 <div className="contrail my-6" />
                 <ul className="space-y-3 font-mono text-[11px] tracking-[0.1em] text-muted uppercase">
                   <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-sky" /> Business Bay, Dubai, UAE</li>
-                  <li className="flex items-center gap-3"><Clock3 className="h-4 w-4 text-sky" /> Sun–Fri 08:30–18:00 GST · AOG 24/7</li>
+                  <li className="flex items-center gap-3"><Clock3 className="h-4 w-4 text-sky" /> Sun–Fri 08:30–18:00 GST</li>
                 </ul>
                 <div className="mt-6 flex gap-3">
                   {[{ Icon: Linkedin, label: 'LinkedIn' }, { Icon: Instagram, label: 'Instagram' }, { Icon: Facebook, label: 'Facebook' }].map(({ Icon, label }) => (

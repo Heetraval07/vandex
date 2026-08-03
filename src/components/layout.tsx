@@ -179,7 +179,7 @@ function NavDropdown({ to, label, menu, allLabel }: { to: string; label: string;
               <span className="min-w-0">
                 <span className="flex items-center gap-2">
                   <span className="text-[13px] font-medium text-light">{name}</span>
-                  {aog && <span className="rounded-full border border-orange/40 px-1.5 py-px font-mono text-[9px] uppercase tracking-[0.14em] text-orange">24/7</span>}
+                  {aog && <span className="rounded-full border border-orange/40 px-1.5 py-px font-mono text-[9px] uppercase tracking-[0.14em] text-orange">Priority</span>}
                 </span>
                 <span className="mt-0.5 block truncate text-[11px] text-muted">{caption}</span>
               </span>
@@ -336,7 +336,7 @@ function Header() {
                 </Link>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted">
-                <span className="font-mono text-[11px] tracking-[0.2em]">DXB · AOG 24/7</span>
+                <span className="font-mono text-[11px] tracking-[0.2em]">DXB · Priority AOG desk</span>
                 <div className="flex items-center gap-4">
                   <a href="mailto:info@vandex.ae" className="hover:text-sky">info@vandex.ae</a>
                 </div>
@@ -360,7 +360,7 @@ function Footer() {
             <Logo className="h-9" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               Certified aircraft spare parts and aviation components, supplied worldwide from Dubai, with verified
-              documentation on every shipment and a 24/7 AOG desk.
+              documentation on every shipment and a priority AOG desk.
             </p>
             <div className="mt-6 flex gap-3">
               {socials.map(({ Icon, label, href }) => (
@@ -382,7 +382,7 @@ function Footer() {
           ]} />
 
           <FooterCol title="Capabilities" links={[
-            ['AOG Support 24/7', '/supply-solutions#aog-support'],
+            ['AOG Support', '/supply-solutions#aog-support'],
             ['Global Procurement', '/supply-solutions#global-procurement'],
             ['Aircraft Parts Sourcing', '/supply-solutions#parts-sourcing'],
             ['Worldwide Logistics', '/supply-solutions#worldwide-logistics'],
@@ -398,7 +398,7 @@ function Footer() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-orange" />
                 </span>
-                <a className="text-light hover:text-orange" href="tel:+97140000000">AOG 24/7: +971 4 000 0000</a>
+                <a className="text-light hover:text-orange" href="tel:+97140000000">AOG line: +971 4 000 0000</a>
               </li>
               <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-sky" /><a className="hover:text-light" href="tel:+97140000000">Sales: +971 4 000 0000</a></li>
               <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-sky" /><a className="hover:text-light" href="mailto:info@vandex.ae">info@vandex.ae</a></li>

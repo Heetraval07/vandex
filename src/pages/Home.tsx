@@ -87,7 +87,7 @@ function Hero() {
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.75, duration: 0.8 }}
           className="mt-8 max-w-xl text-[15px] leading-relaxed text-silver/85">
           VANDEX sources, certifies, and delivers aircraft spare parts for airlines, MROs, and operators,
-          with complete documentation on every shipment and AOG requests prioritized around the clock.
+          with complete documentation on every shipment and AOG requests given priority handling.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.8 }}
           className="mt-10 flex flex-wrap items-center gap-5">
@@ -97,7 +97,7 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-70" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-orange" />
             </span>
-            AOG DESK: LIVE 24/7
+            AOG DESK: PRIORITY HANDLING
           </span>
         </motion.div>
       </motion.div>
@@ -122,7 +122,7 @@ function Hero() {
 function TrustBar() {
   const items = [
     'ASA-100 aligned quality system',
-    '24/7 AOG desk',
+    'Priority AOG desk',
     'Full traceability on every part',
     'Dubai hub, worldwide delivery',
     'One counterparty, sourcing to delivery',
@@ -326,7 +326,7 @@ function ServicesStrip() {
                   <div className="relative min-w-0 flex-1">
                     <div className="flex items-center gap-3">
                       <h3 className="text-xl font-semibold text-silver transition-colors group-hover:text-light md:text-3xl">{s.name}</h3>
-                      {aog && <span className="shrink-0 rounded-full border border-orange/40 bg-orange/10 px-2.5 py-0.5 font-mono text-[10px] tracking-[0.15em] text-orange">24/7</span>}
+                      {aog && <span className="shrink-0 rounded-full border border-orange/40 bg-orange/10 px-2.5 py-0.5 font-mono text-[10px] tracking-[0.15em] text-orange">PRIORITY</span>}
                     </div>
                     <p className="mt-1.5 truncate text-[13.5px] leading-relaxed text-muted md:whitespace-normal">{s.short}</p>
                   </div>

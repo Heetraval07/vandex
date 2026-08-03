@@ -191,7 +191,7 @@ export default function WhyVandex() {
               <Users className="h-6 w-6 text-sky" />
               <p className="text-[13.5px] leading-relaxed text-muted">
                 Named leadership, credentials, and photography to follow at launch. Operating from Dubai, UAE, with
-                the AOG desk live 24/7.
+                a priority AOG desk.
               </p>
             </div>
           </div>

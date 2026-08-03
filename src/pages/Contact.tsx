@@ -10,7 +10,7 @@ const contacts = [
 ];
 
 const assurances = [
-  '24/7 AOG support',
+  'Priority AOG support',
   'Traceable documentation on every shipment',
   'Reply within one business day',
 ];

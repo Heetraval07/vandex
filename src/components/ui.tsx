@@ -203,7 +203,7 @@ export function CtaBand() {
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-5">
             <BtnPrimary to="/request-a-quote">Request a quote</BtnPrimary>
-            <BtnGhost to="/supply-solutions#aog-support">24/7 AOG desk</BtnGhost>
+            <BtnGhost to="/supply-solutions#aog-support">Priority AOG desk</BtnGhost>
           </div>
         </Reveal>
       </div>

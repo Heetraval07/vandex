@@ -35,8 +35,8 @@ export const products: ProductCategory[] = [
     ata: 'ATA 29',
     tagline: 'Pumps, actuators, valves, and reservoirs for every pressure system.',
     description:
-      'VANDEX maintains deep sourcing for engine-driven pumps, electric pumps, PTUs, actuators, and hydraulic valves (the components that ground aircraft fastest when they fail). Our AOG desk prioritizes hydraulic requests around the clock.',
-    features: ['24/7 AOG priority handling', 'Overhauled with full shop findings', 'Hose and fitting programs', 'Serviceable exchange pool access'],
+      'VANDEX maintains deep sourcing for engine-driven pumps, electric pumps, PTUs, actuators, and hydraulic valves (the components that ground aircraft fastest when they fail). Our AOG desk prioritizes hydraulic requests.',
+    features: ['AOG priority handling', 'Overhauled with full shop findings', 'Hose and fitting programs', 'Serviceable exchange pool access'],
     applications: ['Primary flight controls', 'Landing gear actuation', 'Braking systems', 'Cargo door systems'],
   },
   {

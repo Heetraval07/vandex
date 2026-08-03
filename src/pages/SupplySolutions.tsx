@@ -7,14 +7,14 @@ import { services, serviceBySlug, type Service } from '../data/content';
 import { PageHero, Reveal, SectionHead, BtnPrimary, BtnGhost, FaqList } from '../components/ui';
 
 const commitments = [
-  ['AOG quotation', 'Target 2 hours, 24/7/365'],
+  ['AOG quotation', 'Target 2 hours, during desk hours'],
   ['Standard quotation', 'Within business hours, same day'],
   ['Documentation', 'Issued with the quotation, before purchase'],
-  ['Desk hours', 'Sun–Fri 08:30–18:00 GST · AOG 24/7'],
+  ['Desk hours', 'Sun–Fri 08:30–18:00 GST'],
 ];
 
 const aogSteps = [
-  ['Call or submit', 'AOG line or priority form, 24/7/365'],
+  ['Call or submit', 'AOG line or priority form, during desk hours'],
   ['Sourced immediately', 'Network checked first, then partners worldwide'],
   ['Quoted fast', 'Price, condition, documentation, and ETA, target 2 hours'],
   ['Moving same day', 'Booked, packed, and tendered on approval'],
@@ -126,7 +126,7 @@ export default function SupplySolutions() {
     <>
       <Seo
         title="AOG Support & Aircraft Parts Supply Solutions"
-        description="24/7 AOG support, global procurement, repair management, inventory and consignment programs, worldwide logistics, and vendor-managed sourcing: aviation supply solutions from Dubai, UAE."
+        description="Priority AOG support, global procurement, repair management, inventory and consignment programs, worldwide logistics, and vendor-managed sourcing: aviation supply solutions from Dubai, UAE."
         path="/supply-solutions"
         schema={[
           breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Supply Solutions', path: '/supply-solutions' }]),
@@ -136,7 +136,7 @@ export default function SupplySolutions() {
       <PageHero
         plate="Supply solutions"
         title="Aviation supply solutions, built around the aircraft"
-        text="From a 24/7 AOG desk to managed consignment stock, our services answer one question: how quickly can this aircraft return to service?"
+        text="From a priority AOG desk to managed consignment stock, our services answer one question: how quickly can this aircraft return to service?"
         crumbs={[{ name: 'Home', path: '/' }, { name: 'Supply Solutions', path: '/supply-solutions' }]}
       />
 
@@ -151,7 +151,7 @@ export default function SupplySolutions() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-orange" />
                 </span>
-                24/7 · Priority desk
+                Priority desk
               </div>
               <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">{aog.name}</h2>
               <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted">{aog.description}</p>
