@@ -38,6 +38,9 @@ function Hero() {
   const [videoReady, setVideoReady] = useState(false);
   useEffect(() => {
     if (prefersReduced()) return;
+    // Desktop only: mobile keeps the static fallback visual (bandwidth + avoids
+    // autoplay-video quirks on mobile browsers).
+    if (!window.matchMedia('(min-width: 768px)').matches) return;
     const nav = navigator as Navigator & { connection?: { saveData?: boolean } };
     if (nav.connection?.saveData) return;
     setShowVideo(true);
@@ -54,7 +57,7 @@ function Hero() {
         <HeroFallback />
         {showVideo && (
           <video
-            muted loop playsInline preload="metadata"
+            autoPlay muted loop playsInline preload="metadata"
             onCanPlay={() => setVideoReady(true)}
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1200ms] ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           >
